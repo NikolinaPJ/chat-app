@@ -1,6 +1,7 @@
 @import "../../styles/index";
 
 .button {
+    @include type ($font-weight: 700);
     @include shape('rounded');
     display: block;
     height: 40px;
