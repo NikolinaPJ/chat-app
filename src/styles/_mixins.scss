@@ -4,7 +4,7 @@
     } @else if $type == 'rounded-border' {
         border-radius: $size-radius-small; 
         border: 1px solid $color-theme;
-    } @else if $type == ' round' {
+    } @else if $type == 'round' {
         border-radius: $size-radius-large;
     }
 }
