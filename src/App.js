@@ -1,9 +1,10 @@
-import { MessageForm } from "./components/MessageForm";
-import { MessageMetadata } from "./components/MessageMetadata/MessageMetadata.component";
-import { JoinPage } from "./pages/JoinPage";
+import { MessageText } from "./components/MessageText";
+
 
 function App() {
-  return <MessageMetadata displayName="HeraTheYorkie" time="20:36" />;
+  return <MessageText displayName="HeraTheYorkie" time="20:36">
+Who let the dog out? wuf, wuf, wuf 
+  </MessageText>;
 }
 
 export default App;
