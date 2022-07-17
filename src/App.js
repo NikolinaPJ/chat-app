@@ -1,14 +1,17 @@
-import { Avatar } from "./components/Avatar";
-import { MessageText } from "./components/MessageText";
+import { Message } from "./components/Message";
 
 
 function App() {
-  return <div>
-    <Avatar text="HP" backgroundColor="yellow" />
-    <MessageText displayName="HeraTheYorkie" time="20:36">
+  return (
+  <Message
+    avatarBackgroundColor="yellow" 
+    avatarText="HP" 
+    displayName="HeraTheYorkie Pavić" 
+    time="20:36"
+    >
       Who let the dog out? wuf, wuf, wuf 
-    </MessageText>
-  </div> 
+    </Message> 
+  );
 }
 
 export default App;
