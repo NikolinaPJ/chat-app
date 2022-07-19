@@ -1,39 +1,42 @@
 import "./ChatPage.styles.scss";
 
+import { Message as MessageModel } from "../../models/Message";
 import { Message } from "../../components/Message"
 import { MessageForm } from "../../components/MessageForm"
-
+import { useUser } from "../../contexts/UserContext";
+import { useState } from "react";
 
 export function ChatPage (props) {
+    const { user } = useUser();
+    const [state, setState] = useState([]);
 
-    const sendMessage = (formState) => {
-        console.log(formState);
+    const sendMessage = (formState) => {    const message = new MessageModel({
+        messageText: formState.message,
+        user,
+      });
+  
+      setState((state) => [ ...state, message ]);
     }
+
+
+  const messageItems = state.map((message, index) => (
+    <div key={index} className="chat-page__message-list-item">
+      <Message
+        avatarBackgroundColor={message.user.avatarBackgroundColor}
+        avatarText={message.user.avatarText}
+        displayName={message.user.displayName}
+        time={message.displayCreatedAt()}
+      >
+        {message.messageText}
+      </Message>
+    </div>
+  ));
 
     return (
         <div className="chat-page">
             <div className="chat-page__title">Chat with friends</div>
             <div className="chat-page__message-list">
-                <div className="chat-page__message-lis-item">
-                    <Message
-                    avatarBackgroundColor="yellow" 
-                    avatarText="HP" 
-                    displayName="HeraTheYorkie Pavić" 
-                    time="20:36"
-                    >
-                        Who let the dog out?  
-                    </Message>
-                </div>
-                <div className="chat-page__message-list-item">
-                    <Message
-                    avatarBackgroundColor="blue" 
-                    avatarText="EJ" 
-                    displayName="Ella Jozić" 
-                    time="20:42"
-                    >
-                        wuf, wuf, wuf, wuf, wuf ! 
-                    </Message> 
-                </div>
+                {messageItems}
             </div>
             <div className="chat-page__form">
                 <MessageForm 
