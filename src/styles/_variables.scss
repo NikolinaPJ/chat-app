@@ -1,13 +1,12 @@
-$color-text: black;
 $color-background: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
+$color-text: rgb(203, 34, 189);
 $color-theme: linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%);
-$color-theme-inverted: black;
+$color-theme-inverted: #000;
 
-$font-family: 'Roboto', sans-serif;
+$font-family: 'Walter Turncoat', cursive;
+
 
 $size-radius-small: 8px;
 $size-radius-large: 100%;
 $size-rem: 1.6rem;
 $size-wrapper-margin: 16px;
-
-
