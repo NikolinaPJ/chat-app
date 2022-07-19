@@ -48,13 +48,14 @@ export function ChatPage() {
 
       setState((state) => [
         ...state,
-        MessageModel.fromObject(message.data)
+        MessageModel.fromObject({ ...message.data, id: message.id })
       ]);
     });
   }, [drone]);
 
-  const messageItems = state.map((message, index) => (
-    <div key={index} className="chat-page__message-list-item">
+  console.log(state);
+  const messageItems = state.map((message) => (
+    <div key={message.id} className="chat-page__message-list-item">
       <Message
         avatarBackgroundColor={message.user.avatarBackgroundColor}
         avatarText={message.user.avatarText}
