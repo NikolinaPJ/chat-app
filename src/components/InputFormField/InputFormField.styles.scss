@@ -6,7 +6,7 @@
 
 
   &__label {
-    @include type($font-size: 1.4rem);
+    @include type($font-size: 1.4rem, $font-weight: 800);
     display: block;
     width: 100%;
     margin-bottom: 8px;

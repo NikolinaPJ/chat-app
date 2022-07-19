@@ -28,7 +28,7 @@ export function ChatPage() {
 
   useEffect(() => {
     if (drone !== null) return;
-    setDrone(new window.Scaledrone('aC1vqpO2aEavkoXU'));
+    setDrone(new window.Scaledrone('JatRZnUOtqhLvOr2'));
   }, [drone, setDrone]);
 
   useEffect(() => {
@@ -48,7 +48,7 @@ export function ChatPage() {
 
       setState((state) => [
         ...state,
-        MessageModel.fromObject(message.data)
+        MessageModel.fromObject({...message.data, id: message.id})
       ]);
     });
   }, [drone]);
