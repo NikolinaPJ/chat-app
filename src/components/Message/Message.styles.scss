@@ -2,8 +2,32 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: stretch;
-    align-items: flex-start;
+    align-items: center;
     animation: fade-in 2s ease;
+
+
+    &.my-messages {
+      flex-flow: row-reverse nowrap;
+      .message__avatar {
+        margin-right: 0;
+        margin-left: 8px;
+      }
+      .message__text {
+        flex: initial;
+        .message-text {
+          .message-metadata {
+            flex-flow: row-reverse nowrap;
+            .message-metadata__display-name {
+              margin-right: 0;
+              margin-left: 8px;
+            }
+          }
+          .message-text__content {
+            text-align: right;
+          }
+        }
+      }
+    }
 
     &__avatar {
       flex: 0 0 auto;
