@@ -2,11 +2,13 @@
 
 .input-element {
     @include shape ('rounded-border');
-    @include type;
+    @include type ($font-size:3rem, $font-family: 'WaltographRegular');
     height: 40px;
     width: 100%;
     padding: 0 16px;
-    border: 1px dotted #981052
+    border: 1px dotted #c487a4;
+    background-color: #f0c5da;
+    text-align: center;
  
 }
 

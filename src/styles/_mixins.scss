@@ -1,4 +1,3 @@
-
 @mixin shape($type) {
     @if $type == 'rounded' {
       border-radius: $size-radius-small;

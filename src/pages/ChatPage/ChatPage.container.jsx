@@ -27,7 +27,6 @@ export function ChatPage() {
     }
   }
 
-
   useEffect(() => {
     if (drone !== null) return;
     setDrone(new window.Scaledrone('JatRZnUOtqhLvOr2'));
@@ -39,11 +38,10 @@ export function ChatPage() {
     const room = drone.subscribe('chat');
 
     room.on('open', error => {
-      if (error) {
+      if (error) //
         return setError(error);
-      }
-      console.log('Connected to room');
-
+      
+      setJoinedRoom(true);
     });
   
     room.on('message', message => {

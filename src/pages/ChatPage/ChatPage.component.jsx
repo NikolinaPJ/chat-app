@@ -1,18 +1,26 @@
 import "./ChatPage.styles.scss";
 
+import Error from "../../assets/Error.svg";
+
 import { Message } from "../../components/Message";
 import { MessageForm } from "../../components/MessageForm";
 
 export function ChatPage(props) {
   if (props.error !== null) {
     return (
-      <div className="chat-page">Failed to connect to chat room.</div>
+      <div className="chat-page__error"><span>error: </span>Failed to connect to chat room. <br/>
+      <img src={Error} className="chat-page__img" alt="Error"/>
+      </div>
     );
   }
 
   if (!props.joinedRoom) {
     return (
-      <div className="chat-page">Joining room, please wait...</div>
+       <div className="chat-page__loader">
+        <span className="chat-page__loader__element"></span>
+        <span className="chat-page__loader__element"></span>
+        <span className="chat-page__loader__element"></span>
+        </div>
     );
   }
 
@@ -31,7 +39,9 @@ export function ChatPage(props) {
 
   return (
     <div className="chat-page">
-      <div className="chat-page__title">Chat with friends</div>
+      <div className="chat-page__title">Chat with 
+      <br/>
+      &hearts; friends &hearts;</div>
       <div className="chat-page__message-list">
         {messageItems}
       </div>

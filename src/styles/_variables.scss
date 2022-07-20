@@ -1,12 +1,14 @@
 $color-background: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
-$color-text: rgb(203, 34, 189);
-$color-theme: linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%);
-$color-theme-inverted: #000;
+$color-text: rgb(66, 5, 61);
+$color-theme: linear-gradient(-225deg, #FF057C 0%, #8d0b93 50%, #321575 100%);
+$color-theme-inverted: rgb(66, 5, 61);
 
-$font-family: 'Walter Turncoat', cursive;
+$font-family:'Ubuntu', serif;
 
 
 $size-radius-small: 8px;
 $size-radius-large: 100%;
 $size-rem: 1.6rem;
 $size-wrapper-margin: 16px;
+
+
