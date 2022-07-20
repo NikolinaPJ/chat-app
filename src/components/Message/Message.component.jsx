@@ -2,10 +2,18 @@ import "./Message.styles.scss";
 
 import { Avatar } from "../Avatar";
 import { MessageText } from "../MessageText";
-
+import { useEffect } from "react";
+import { useRef } from "react";
 
 export function Message(props) {
+  const ref = useRef();
+
+  useEffect(() => {
+    ref.current.scrollIntoView({ behavior: 'smooth' });
+  }, []);
+
   return (
+    <div ref={ref} className="message">
     <div className="message">
       <div className="message__avatar">
         <Avatar
@@ -21,6 +29,7 @@ export function Message(props) {
           {props.children}
         </MessageText>
       </div>
+     </div>
     </div>
   );
 }

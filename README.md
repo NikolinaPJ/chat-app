@@ -1,23 +1,22 @@
-#chat-app
+# chat-app
 
 ---
 
-<div align ="center">
+<div aling="center">
     <br/>
-    <a href="https://react-portfolio-example.vercel.app/" target="__blank">
-        <img src="chat.png" alt="React chat app" width="500" />
+        <img src="chat.png" alt="React chat app" width="500"/>
         <br/>
         <br/>
         <b>
-           [**Try me on Netlify**] (https://nikolinapj-chat-app.netlify.app/)
+        Real-time chat application using JavaScript, React, SCSS, and Scaledrone.
+        Developed as part of Algebra's Frontend developer course.
         </b>
-    </a>
     <br/>
     <br/>   
-    <p>Real-time chat application using JavaScript, React, SCSS, and Scaledrone.
-    Developed as part of Algebra's Frontend developer course. </p>
-
 </div>
+
+---
+[**Try me on Netlify**](https://nikolinapj-chat-app.netlify.app//)
 
 ---
 
