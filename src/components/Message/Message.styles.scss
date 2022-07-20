@@ -3,6 +3,7 @@
     flex-flow: row nowrap;
     justify-content: stretch;
     align-items: flex-start;
+    animation: fade-in 2s ease;
 
     &__avatar {
       flex: 0 0 auto;
@@ -13,5 +14,15 @@
     &__text {
       flex: 1 1 auto; 
       display: block;
+    }
+  
+  @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+    
+      to {
+        opacity: 1;
+      }
     }
   } 
