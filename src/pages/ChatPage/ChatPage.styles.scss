@@ -29,6 +29,7 @@
   &__message-list {
     flex: 1 1 auto;
     overflow-y: auto;
+    width: 80%;
   }
 
   &__message-list-item {
@@ -42,6 +43,8 @@
   &__form {
     flex: 0 0 auto;
     margin: 16px 0;
+    width: 70%;
+    margin-left: 15%
   }
 
  
@@ -88,6 +91,6 @@
 &__img {
   width: 30%;
   height: 30%;
-}
+ }
 }
  

@@ -6,12 +6,14 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { ChatPage as Component } from "./ChatPage.component";
 
+
 export function ChatPage() {
   const { user } = useUser();
   const [state, setState] = useState([]);
   const [drone, setDrone] = useState(null);
   const [error, setError] = useState(null);
   const [joinedRoom, setJoinedRoom] = useState(false);
+  const [usersArray, setUsersArray] = useState([]);
 
   const sendMessage = (formState) => {
     const message = new MessageModel({
@@ -40,8 +42,11 @@ export function ChatPage() {
     room.on('open', error => {
       if (error) //
         return setError(error);
-      
       setJoinedRoom(true);
+    });
+
+    room.on("users", function (users) {
+      setUsersArray([...users]);
     });
   
     room.on('message', message => {
@@ -60,6 +65,7 @@ export function ChatPage() {
       onSendMessage={sendMessage}
       error={error}
       joinedRoom={joinedRoom}
+      value={{usersArray}}
     />
   );
 }

@@ -1,7 +1,7 @@
 import "./JoinPage.styles.scss";
 
 import Disneyheartbeat from "../../assets/Disneyheartbeat.svg";
-
+import { Footer } from "../../components/Footer";
 import { JoinForm } from "../../components/JoinForm";
 import { useUser } from "../../contexts/UserContext";
 
@@ -23,6 +23,10 @@ export function JoinPage(props) {
       <div className="join-page__form">
         <JoinForm onJoin={joinWithUser} />
       </div>
+      <div className="join-page__footer">
+      <Footer />
+      </div>
     </div>
+
   );
 }
