@@ -10,7 +10,7 @@
   margin: 0 auto;
 
   &__title {
-    @include type($font-size: 4.4rem, $font-weight: 700, $font-family: 'WaltographRegular');
+    @include type($font-size: 4rem, $font-weight: 700, $font-family: 'WaltographRegular');
     flex: 0 0 auto;
     margin: 24px 0;
     text-align: center;

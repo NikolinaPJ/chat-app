@@ -3,7 +3,7 @@
 .input-element {
     @include shape ('rounded-border');
     @include type ($font-size:3rem, $font-family: 'WaltographRegular');
-    height: 40px;
+    height: 35px;
     width: 100%;
     padding: 0 16px;
     border: 1px dotted #c487a4;

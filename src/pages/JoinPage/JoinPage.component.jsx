@@ -15,9 +15,9 @@ export function JoinPage(props) {
   return (
     <div className="join-page">
       <div className="join-page__title"> 
-      Chat with 
-      <br/>
-      &hearts; friends &hearts;
+      talk <br/> 
+      &hearts; Disney &hearts; 
+      <br/> to me 
       </div>
       <img src={Disneyheartbeat} className="join-page__img" alt="Disneyheartbeat"/>
       <div className="join-page__form">

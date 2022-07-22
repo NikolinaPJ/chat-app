@@ -2,9 +2,7 @@
 
 <div aling="center">
     <br/>
-        <img src="JoinPage.png" alt="React chat app joinpage" width="500" aling="center"/>
-        <br/>
-        <img src="ChatPage.png" alt="React chat app chatpage" width="500" aling="center"/>
+        <img src="chatApp.img.png" alt="React chat app joinpage" width="600" aling="center"/>
         <br/>
         <b>
         This is Real-time chat application using JavaScript, React, SCSS, and Scaledrone.
