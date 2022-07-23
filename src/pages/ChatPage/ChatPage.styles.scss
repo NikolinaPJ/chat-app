@@ -8,6 +8,12 @@
   height: 100vh;
   width: calc(100% - #{2 * $size-wrapper-margin});
   margin: 0 auto;
+  background-image: 
+  url(../../assets/DisneyCastle.svg),
+  url(../../assets/DarthVader.svg);
+  background-repeat:no-repeat;
+  background-size: 600px 600px, 400px 400px;
+  background-position: center bottom, left bottom;
 
   &__title {
     @include type($font-size: 4rem, $font-weight: 700, $font-family: 'WaltographRegular');
@@ -30,6 +36,23 @@
     flex: 1 1 auto;
     overflow-y: auto;
     width: 80%;
+    margin-left: 65px;
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color:rgb(96, 36, 96);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(249, 175, 249, 0.5);
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(249, 175, 249, 0.979);
+    }
   }
 
   &__message-list-item {
@@ -44,7 +67,7 @@
     flex: 0 0 auto;
     margin: 16px 0;
     width: 70%;
-    margin-left: 15%
+    margin-left: 15%;
   }
 
  
@@ -86,11 +109,12 @@
 &__error {
   @include type($font-size: 6rem, $font-weight: 700, $font-family: 'WaltographRegular');
   text-align: center;
+  background-image: 
+  url(../../assets/PoisonApple.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
   }
 
-&__img {
-  width: 30%;
-  height: 30%;
- }
 }
  

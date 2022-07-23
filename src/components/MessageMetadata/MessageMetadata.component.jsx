@@ -9,7 +9,7 @@ export function MessageMetadata(props) {
             {props.displayName}
         </span>
         <span className="message-metadata__time">
-            {props.time}
+        <br/> {props.time}
         </span>
     </span>
 

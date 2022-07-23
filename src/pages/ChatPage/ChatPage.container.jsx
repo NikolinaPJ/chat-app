@@ -40,10 +40,10 @@ export function ChatPage() {
     const room = drone.subscribe('chat');
 
     room.on('open', error => {
-      if (error) //
+      if (error) 
         return setError(error);
-      setJoinedRoom(true);
-    });
+        setJoinedRoom(true);
+      });
 
     room.on("users", function (users) {
       setUsersArray([...users]);
