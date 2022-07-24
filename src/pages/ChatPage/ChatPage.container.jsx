@@ -50,8 +50,7 @@ export function ChatPage() {
     });
   
     room.on('message', message => {
-      console.log('Message received', message);
-
+      
       setState((state) => [
         ...state,
         MessageModel.fromObject({ ...message.data, id: message.id })

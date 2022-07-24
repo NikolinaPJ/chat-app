@@ -5,6 +5,7 @@
         @include type ($line-height: 24 / 16);
         display: block;
         width: 100%;
+        padding: 5px;
     }
     background-color: rgb(247, 215, 250, 0.5);
     width: max-content;
