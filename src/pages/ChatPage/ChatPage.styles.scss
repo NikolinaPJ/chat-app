@@ -9,11 +9,11 @@
   width: calc(100% - #{2 * $size-wrapper-margin});
   margin: 0 auto;
   background-image: 
-  url(../../assets/DisneyCastle.svg),
-  url(../../assets/DarthVader.svg);
+  url(../../assets/DisneyCastle.svg);
   background-repeat:no-repeat;
-  background-size: 600px 600px, 400px 400px;
-  background-position: center bottom, left bottom;
+  background-size:  400px 400px;
+  background-position: center bottom;
+  background-attachment: fixed;
 
   &__title {
     @include type($font-size: 4rem, $font-weight: 700, $font-family: 'WaltographRegular');
@@ -117,4 +117,27 @@
   }
 
 }
+
+@media only screen and (min-width: 600px) {
+  .chat-page {
+      background-image: 
+      url(../../assets/DisneyCastle.svg),
+      url(../../assets/DarthVader.svg);
+      background-repeat:no-repeat;
+      background-size: 400px 400px, 200px 200px;
+      background-position: center bottom, left bottom;
+      background-attachment: fixed, fixed;
+  }
+}
  
+@media only screen and (min-width: 768px) {
+.chat-page {
+  background-image: 
+  url(../../assets/DisneyCastle.svg),
+  url(../../assets/DarthVader.svg);
+  background-repeat:no-repeat;
+  background-size: 600px 600px, 400px 400px;
+  background-position: center bottom, left bottom;
+  background-attachment: fixed, fixed;
+  }
+}
